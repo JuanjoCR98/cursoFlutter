@@ -13,8 +13,9 @@ class ListViewBuilderScreen extends StatelessWidget {
         centerTitle: true,
         title: const Text("ListView Screen"),
         elevation: 0,
+        backgroundColor: Colors.indigo,
       ),
-      body: bodyListViewBuilder(),
+      body: bodyListViewSeparated(),
     );
   }
 
@@ -24,7 +25,10 @@ class ListViewBuilderScreen extends StatelessWidget {
         itemCount: options.length,
         itemBuilder: (context, index) => ListTile(
           title: Text(options[index]),
-          trailing: const Icon(Icons.arrow_forward_ios_outlined),
+          trailing: const Icon(Icons.arrow_forward_ios_outlined, color: Colors.indigo),
+          onTap: () {
+            print(options[index]);
+          },
         )
     );
   }
@@ -34,7 +38,10 @@ class ListViewBuilderScreen extends StatelessWidget {
       itemCount: options.length,
       itemBuilder: (context, index) => ListTile(
         title: Text(options[index]),
-        trailing: const Icon(Icons.arrow_forward_ios_outlined),
+        trailing: const Icon(Icons.arrow_forward_ios_outlined, color: Colors.indigo),
+        onTap: () {
+          print(options[index]);
+        },
       ),
       separatorBuilder: (context, index) => const Divider(),
     );
