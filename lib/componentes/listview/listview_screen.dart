@@ -17,14 +17,17 @@ class ListViewScreen extends StatelessWidget {
 
   Widget bodyListView()
   {
+    const options = ["Jan Oblak", "Nahuel Molina", "Jose Maria Gimenez", "Reinildo Mandava", "Mario Hermoso", "Koke", "De Paul", "Lemar", "Griezmann", "Alvaro Morata", "Carrasco"];
+
     return Center(
      child: ListView(
-       children: const [
-         Text("Hola mundo"),
-         Text("Hola mundo"),
-         Text("Hola mundo"),
-         Text("Hola mundo"),
-         Text("Hola mundo")
+       children: [
+         ...options.map(
+             (jugador) => ListTile(
+               title: Text(jugador),
+               trailing: const Icon(Icons.arrow_forward_ios_outlined),
+             )
+         )
        ],
      ),
     );
