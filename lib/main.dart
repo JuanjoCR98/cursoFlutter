@@ -1,4 +1,4 @@
-import 'package:cursoflutter/componentes/listview/listview_screen.dart';
+import 'package:cursoflutter/componentes/listview/listviewbuilder_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: const ListViewScreen(),
+      home: const ListViewBuilderScreen(),
     );
   }
 }
